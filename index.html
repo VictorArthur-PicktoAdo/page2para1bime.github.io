@@ -4,75 +4,89 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <!-- <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"> -->
+    <link rel="stylesheet" href="css/lightbox.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="js/jquery-3.5.0.min.js"></script>
-    <!-- <script type="text/javascript" src="js/bootstrap.min.js"></script> -->
-    <script type="text/javascript" src="js/script.js"></script>
+    <script src="js/lightbox.js"></script>
     <script type="text/javascript" src="js/jquery.mask.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.13.0/js/all.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.13.0/js/v4-shims.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
     <script type="text/javascript"></script>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat"> -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/v4-shims.css">
-    <script defer src="https://use.fontawesome.com/releases/v5.13.0/js/all.js"></script>
-    <script defer src="https://use.fontawesome.com/releases/v5.13.0/js/v4-shims.js"></script>
     <title>Home_Page</title>
+    <script>
+        $(document).ready(function(){
+            $("#myInput").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $(".card").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
 </head>
 <body>
     <!-- NAVEGATION BAR -->
     <button type="button" id="adaw"  class="button" value="adwad" onclick="mostrar('open_div')"><i class="fas fa-angle-down fa-3x"></i></button>
         <div id="open_div" class="hidden">
-            <div class="bottonav w3-border-top">
-                <div class="centralizar">
-                    <a href="index.html"><i class="fas fa-tree fa-2x"></i><br>Inicio </a>
-                    <a href="index1.html"><i class="fas fa-newspaper fa-2x"></i><br>Novidades </i></a>
-                    <a href="index2.html" ><i class="fas fa-phone fa-2x"></i><br>Contato </a>
-                    <a href="index3.html" ><i class="fas fa-id-card-alt fa-2x"></i><br>Sobre </a>
+            <div class="bottonav">
+                <div  class="centralizar">
+                    <div id="haper"><a href="index.html"><i  class="fas fa-tree fa-lg"></i></a><div id="hover"> Inicio</div></div>
+                    <div id="haper1"><a href="index1.html"><i class="fas fa-newspaper fa-lg"></i></a><div id="hover1"> Novidades</div></div>
+                    <div id="haper2"><a href="index2.html" ><i class="fas fa-phone fa-lg"></i></a><div id="hover2"> Contato</div></div>
+                    <div id="haper3"><a href="index3.html" ><i class="fas fa-id-card-alt fa-lg"></i></a><div id="hover3"> Sobre</div></div>
                 </div>    
                 <div class="search-container">
-                    <form action="/index.php">
-                        <input type="text" placeholder="Search.." name="search">
-                        <button class="text" type="submit">Buscar</button>
+                    <form>
+                        <input id="myInput" type="text" placeholder="Search.." name="search">
                     </form>
                 </div>
             </div>
         </div>
             
     <!-- ROW -->
-    <div class="row">
-        <div class="centercolumn">
+    <div id="1" class="row">
+        <div id="2" class="centercolumn">
             <div class="card">
                 <div class="head-perfil">
-                    <img class="imgper" src="imgs/perfil1.jpg" alt="dsda">
+                    <img class="imgper" src="images/perfil1.jpg" alt="dsda">
                     <span>Kelrem Soares</span>
                 </div>
-                <div align="justify" class="space1 ; text" >
-                    <p>awdawdw</p>
+                <p class="space1 ; text">loto</p>
+                <div class="imagens1">
+                    <a href="images/foto1.jpg" data-lightbox="mygallery('1');"><img class="imgs" src="images/foto1.jpg" alt="adwa"></a>
                 </div>
-                <img class="imgs" src="imgs/foto1.jpg" alt="adwa">
             </div>
             <div class="card">
                 <div class="head-perfil">
-                    <img class="imgper" src="imgs/perfil1.jpg" alt="dsda">
+                    <img class="imgper" src="images/perfil1.jpg" alt="dsda">
                     <span>Kelrem Soares</span>
                 </div>
-                <div align="justify" class="space1 ; text">
-                    <p>awdawdw</p>
+                <p class="space1 ; text">desert</p>
+                <div class="imagens2">
+                    <a href="images/foto2.jpg" data-lightbox="mygallery('2');"><img class="imgs" src="images/foto2.jpg" alt="adwa"></a>
                 </div>
-                <img class="imgs" src="imgs/foto2.jpg" alt="adwa">
             </div>
             <div class="card">
                 <div class="head-perfil">
-                    <img class="imgper" src="imgs/perfil1.jpg" alt="dsda">
+                    <img class="imgper" src="images/perfil1.jpg" alt="dsda">
                     <span>Kelrem Soares</span>
                 </div>
-                <div align="justify" class="space1 ; text">
-                    <p>awdawdw</p>
+                <p class="space1 ; text">saaara</p>
+                <div class="imagens3">
+                    <a href="images/foto3.jpg" data-lightbox="mygallery('3');"><img class="imgs" src="images/foto3.jpg" alt="adwa"></a>
                 </div>
-                <img class="imgs" src="imgs/foto3.jpg" alt="adwa">
             </div>
         </div>
+    </div>
+
+    <div class=container4>
+        <p align="center" >Nenhum outra publicação referente!</p>
     </div>
 </body>
 </html>

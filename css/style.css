@@ -5,7 +5,7 @@
 body {
     margin:0;
     background-color: #18191A;
-    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: 'Montserrat', serif;
     color: rgb(255, 255, 255);
     font-size: 14px;
 
@@ -14,6 +14,7 @@ body {
 .content1 .raid1 hr{
     width: 160px;
     border-color: rgb(255, 255, 255); 
+    float: left;
 }
 
 .text{
@@ -27,23 +28,6 @@ body {
     background-color: rgb(176, 233, 178);
 }
 
-::-webkit-scrollbar{
-    width: 10px;
-}
-
-::-webkit-scrollbar-track{
-    background-color: #18191A;
-}
-
-::-webkit-scrollbar-thumb{
-    border-radius: 10px;
-    background-color: rgb(255, 255, 255);;
-}
-
-::-webkit-scrollbar-thumb:hover{
-    background-color: rgb(131, 204, 133);
-}
-
 .bottonav{
     margin: 0;
     padding: 0;
@@ -54,18 +38,35 @@ body {
     position: fixed;
     width: 100%;
     background-color: #242526;
+    border: thin solid #393A3B;
     user-select: none;
+    z-index: 100000;
+}
+
+#hover, #hover1, #hover2, #hover3{
+    border-radius: 3px;
+    color: black;
+    background-color: #c8c8c8;
+    padding: 4px;
+    visibility: hidden;
+    position: absolute;
+    margin-left: 250px;
+}
+
+#haper:hover #hover, #haper1:hover #hover1, #haper2:hover #hover2, #haper3:hover #hover3{
+    visibility: visible;
 }
 
 .centralizar{
     position: relative;
     float: none;
     top: 50%;
-    left: 35%;
+    left: 42%;
     transform: none;
 }
 
 .bottonav a{
+    margin: 10px;
     float: left;
     display: block;
     color: rgb(255, 255, 255);
@@ -78,59 +79,42 @@ body {
 }
 
 .bottonav a:hover {
+    margin: 10px;
     border-radius: 10px;
-    background-color: #323233;
+    background-color: #3a3b3c;
     color: rgb(131, 204, 133);
     user-select: none;
 }
 
 .bottonav a.active:hover {
     border-radius: 10px;
-    background-color: #323233;
+    background-color: #3a3b3c;
     color: rgb(131, 204, 133);
     user-select: none;
 }
 
 .bottonav .search-container {
     float: right;
-    padding-top: 15px;
+    padding-top: 10px;
+    padding-right: 30px;
     user-select: none;
+}
+
+.bottonav input#myInput{
+    width: 350px;
 }
 
 .bottonav input[type=text] {
     padding-top: 10px;
-    padding: 15px;
+    padding: 10px;
     margin-top: 5px;
     font-size: 17px;
     border: none;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    background-color: #18191A;
+    border-radius: 30px;
+    background-color: #3a3b3c;
     color: white;
     user-select: none;
 }
-
-.bottonav .search-container button {
-    bottom: 0;
-    float: right;
-    padding: 15px;
-    margin-top: 5px;
-    margin-right: 16px;
-    background: #18191A;
-    color: rgb(255, 255, 255);
-    font-size: 17px;
-    border: none;
-    cursor: pointer;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    user-select: none;
-}
-
-.bottonav .search-container button:hover {
-    background-color: #323233;
-    color: rgb(131, 204, 133);
-  user-select: none;
-}   
 
 .row:after {
     content: "";
@@ -138,14 +122,25 @@ body {
     clear: both;
 }
 
+.row .centercolumn .card .space1 p{
+    display: block
+}
+
 .centercolumn{
     width: 40%;
     margin: auto;
     margin-bottom: 100px;
+    
+}
+
+
+div.container4 {
+    user-select: none;
 }
 
 .card {
     background-color: #242526;
+    list-style-type: none;
     margin-top: 20px;
     margin-right: 20px;
     border-radius: 10px;
@@ -166,6 +161,16 @@ body {
     padding-left: 20px;
     padding-right: 20px;
     padding-bottom: 1px;
+}
+
+.imagens1 img, .imagens2 img, .imagens3 img{
+    transition: 1s;
+}
+
+.imagens1 img:hover, .imagens2 img:hover, .imagens3 img:hover{
+    filter: grayscale(100%);
+    transform: scale(1.1);
+    z-index: 10;
 }
 
 .imgs {
