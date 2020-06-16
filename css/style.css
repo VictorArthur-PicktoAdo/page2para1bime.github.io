@@ -11,6 +11,12 @@ body {
 
 }
 
+
+.row .centercolumn .card hr{
+    border-color: #18191A;
+    border-width: thin;
+    /* margin-bottom: 30px; */
+}
 .content1 .raid1 hr{
     width: 160px;
     border-color: rgb(255, 255, 255); 
@@ -21,6 +27,12 @@ body {
     /* font-family: Arial, Helvetica, sans-serif; */
     color: rgb(255, 255, 255);
     font-size: 14px;
+}
+
+.text1{
+    /* font-family: Arial, Helvetica, sans-serif; */
+    color: rgb(0, 0, 0);
+    font-size: 15px;
 }
 
 ::selection{
@@ -80,14 +92,14 @@ body {
 
 .bottonav a:hover {
     margin: 10px;
-    border-radius: 10px;
+    border-radius: 5px;
     background-color: #3a3b3c;
     color: rgb(131, 204, 133);
     user-select: none;
 }
 
 .bottonav a.active:hover {
-    border-radius: 10px;
+    border-radius: 5px;
     background-color: #3a3b3c;
     color: rgb(131, 204, 133);
     user-select: none;
@@ -110,7 +122,7 @@ body {
     margin-top: 5px;
     font-size: 17px;
     border: none;
-    border-radius: 30px;
+    border-radius: 5px;
     background-color: #3a3b3c;
     color: white;
     user-select: none;
@@ -133,6 +145,12 @@ body {
     
 }
 
+.centercolumn1{
+    width: 70%;
+    margin: auto;
+    margin-bottom: 100px;
+    
+}
 
 div.container4 {
     user-select: none;
@@ -156,6 +174,10 @@ div.container4 {
     user-select: none;
 }
 
+.row .centercolumn1 .card .imagens1 .adaw .imgs1{
+    float: left;
+}
+
 .space1 {
     padding-top: 1px;
     padding-left: 20px;
@@ -169,13 +191,52 @@ div.container4 {
 
 .imagens1 img:hover, .imagens2 img:hover, .imagens3 img:hover{
     filter: grayscale(100%);
-    transform: scale(1.1);
+    transform: scale(1.0);
     z-index: 10;
 }
+
+#chat{
+    margin-bottom: 10px;
+}
+
+.chat{
+    margin: 30px;
+}
+
+.nick{
+    width: 100%;
+    border-radius: 5px;
+    border: thin solid #393A3B;
+}
+
+.btnConectar{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    left: 50%;
+    border: thin solid #393A3B;
+}
+
+.msg{
+    width: 100%;
+    border-radius: 5px;
+    border: thin solid #393A3B;
+}
+
+.btnEnviar{
+    margin-top: 10px;
+    border: thin solid #393A3B;
+} 
 
 .imgs {
     width: 100%;
     height: 100%;
+    object-fit: cover;
+    user-select: none;
+}
+
+.imgs1 {
+    width: 50%;
+    height: 50%;
     object-fit: cover;
     user-select: none;
 }
@@ -275,6 +336,70 @@ input[type=number]::-webkit-outer-spin-button {
     margin: 0;
 }
 
+
+.btn a{
+    text-decoration: none;
+}
+
+.btn{
+    margin: 30px;
+    width: 220px;
+    height: 50px;
+
+    margin-right: 20px;
+    
+    background-color: rgb(131, 204, 133);
+    color: black;
+
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-items: center;
+
+    user-select: none;
+    transition: .25s;
+
+    position: relative;
+
+    z-index: 0;
+}
+
+.btn .fa-shopping-cart{
+    font-size: 17px;
+
+    position: absolute;
+    top: 48.5%;
+    left: 13%;
+    transform: translate(-50%, -50%);
+    
+    transition: .25s;
+    z-index: 0;
+}
+
+.btn span{
+    font-size: 14px;
+    margin-bottom: 10px;
+
+    margin-left: 45px;
+
+    transition: .25s;
+    clip-path: circle(200px at 125px 27.5px);
+}
+
+.btn:hover{
+    cursor: pointer;
+    opacity: .8;
+}
+
+.btn:hover .fa-shopping-cart{
+    left: 50%;
+}
+
+.btn:hover span{
+    clip-path: circle(0px at 125px 27.5px);
+}
+
 .raid{
     padding-top: 0px;
     padding-left: 20px;
@@ -288,6 +413,10 @@ input[type=number]::-webkit-outer-spin-button {
     padding-left: 25px;
     padding-right: 20px;
     user-select: none;
+}
+
+textarea:focus, input:focus, select:focus {
+    outline: 0;
 }
 
 .content1 .raid1 .w3-section p{
@@ -359,11 +488,21 @@ input[type=number]::-webkit-outer-spin-button {
 }
 
 @media screen and (max-width: 600px) {
+
+    .bottonav input#myInput{
+        width: 480px;
+    }
     
     #adaw{
         display: block;
+        position: fixed;
+        text-decoration: none;
+        z-index: 1000;
     }
 
+    textarea:focus, input:focus, select:focus, button:focus {
+        outline: 0;
+    }
 
     .hidden{
         display: none;
@@ -382,11 +521,34 @@ input[type=number]::-webkit-outer-spin-button {
         float: none;
     }
 
-    .bottonav a, .bottonav input[type=text], .bottonav .search-container button {
+    
+
+    .bottonav a{
+        margin: 10px;
+        float: left;
+        display: block;
+        color: rgb(255, 255, 255);
+        text-align: center;
+        padding: 14px 10px;
+        text-decoration: none;
+        font-size: 17px;
+        user-select: none;
+    
+    }
+    
+    .bottonav a:hover {
+        margin: 10px;
+        border-radius: 5px;
+        background-color: #3a3b3c;
+        color: rgb(131, 204, 133);
+        user-select: none;
+    }
+
+    .bottonav input[type=text]{
         float: none;
         display: block;
         text-align: left;
-        border-radius: 0px;
+        border-radius: 5px;
         width: 100%;
         margin: 0;
         padding: 14px;

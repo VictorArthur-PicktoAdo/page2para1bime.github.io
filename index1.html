@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/lightbox.min.css">
     <script type="text/javascript" src="js/jquery-3.5.0.min.js"></script>
     <script type="text/javascript" src="js/jquery.mask.min.js"></script>
-    <script src="js/lightbox-plus-jquery.min.js"></script>
+    <script src="js/lightbox.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat"> -->
@@ -17,6 +17,16 @@
     <script defer src="https://use.fontawesome.com/releases/v5.13.0/js/all.js"></script>
     <script defer src="https://use.fontawesome.com/releases/v5.13.0/js/v4-shims.js"></script>
     <title>News_Page</title>
+    <script>
+        $(document).ready(function(){
+            $("#myInput").on("keyup", function() {
+                var value = $(this).val().toLowerCase();
+                $(".card1").filter(function() {
+                    $(this).toggle($(this).text().toLowerCase().indexOf(value) > -1)
+                });
+            });
+        });
+    </script>
 </head>
 <body>
     <!-- NAVEGATION BAR -->
@@ -42,42 +52,63 @@
             <div class="rightcolumn">
                 <div class="card1">
                     <div align="justify" class="space1">
-                        <h2>Assuntos</h2>
+                        <h2>Loto (Flor negra)</h2>
                     </div>
-                    <img class="imgs" src="images/foto1.jpg" alt="awdawdaw">
+                    <div class="imagens1">
+                        <a href="images/foto1.jpg" data-lightbox="mygallery('1');"><img class="imgs" src="images/foto1.jpg" alt="adwa"></a>
+                    </div>
+                    
                     <div align="justify" class="space1">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime porro labore dolorum nostrum harum ipsam dolores autem nam, quos culpa iusto perferendis fugiat, laudantium eos eius molestias rerum ad fuga.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime porro labore dolorum nostrum harum ipsam dolores autem nam, quos culpa iusto perferendis fugiat, laudantium eos eius molestias rerum ad fuga... <br><a href="">Saiba mais</a></p>
                     </div>
                 </div>
             </div>
             <div class="middlecolumn">
                 <div class="card1">
                     <div align="justify" class="space1">
-                        <h2>Novidades (Assunto)</h2>
+                        <h2>Novidades (Loto (Flor negra))</h2>
                     </div>
-                    <img class="imgs" src="images/foto3.jpg" alt="awdawdaw">
+                    <div class="imagens1">
+                        <a href="images/foto1.jpg" data-lightbox="mygallery('2');"><img class="imgs" src="images/foto1.jpg" alt="adwa"></a>
+                    </div>
                     <div  align="justify" class="space1">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime porro labore dolorum nostrum harum ipsam dolores autem nam, quos culpa iusto perferendis fugiat, laudantium eos eius molestias rerum ad fuga.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime porro labore dolorum nostrum harum ipsam dolores autem nam, quos culpa iusto perferendis fugiat, laudantium eos eius molestias rerum ad fuga... <br><a href="">Saiba mais</a></p>
                     </div>
                 </div>
                 <div class="card1">
                     <div  align="justify" class="space1">
-                        <h2>Novidades (Assunto)</h2>
+                        <h2>Novidades (Desert (Flor amarela))</h2>
                     </div>
-                    <img class="imgs" src="images/foto3.jpg" alt="awdawdaw">
+                    <div class="imagens2">
+                        <a href="images/foto2.jpg" data-lightbox="mygallery('3');"><img class="imgs" src="images/foto2.jpg" alt="adwa"></a>
+                    </div>
+                    
                     <div  align="justify" class="space1">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime porro labore dolorum nostrum harum ipsam dolores autem nam, quos culpa iusto perferendis fugiat, laudantium eos eius molestias rerum ad fuga.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime porro labore dolorum nostrum harum ipsam dolores autem nam, quos culpa iusto perferendis fugiat, laudantium eos eius molestias rerum ad fuga... <br><a href="">Saiba mais</a></p>
+                    </div>
+                </div>
+                <div class="card1">
+                    <div  align="justify" class="space1">
+                        <h2>Novidades (Saaara (Flor albina))</h2>
+                    </div>
+                    <div class="imagens3">
+                        <a href="images/foto3.jpg" data-lightbox="mygallery('4');"><img class="imgs" src="images/foto3.jpg" alt="adwa"></a>
+                    </div>
+                    <div  align="justify" class="space1">
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime porro labore dolorum nostrum harum ipsam dolores autem nam, quos culpa iusto perferendis fugiat, laudantium eos eius molestias rerum ad fuga... <br><a href="">Saiba mais</a></p>
                     </div>
                 </div>
             </div>
             <div class="leftcolumn">
                 <div class="card1">
                     <div align="justify" class="space1">
-                        <h2>Assuntos</h2>
+                        <h2>Desert (Flor amarela)</h2>
                     </div>
-                    <img class="imgs" src="images/foto2.jpg" alt="awdawdaw">
+                    <div class="imagens2">
+                        <a href="images/foto2.jpg" data-lightbox="mygallery('5');"><img class="imgs" src="images/foto2.jpg" alt="adwa"></a>
+                    </div>
                     <div align="justify" class="space1">
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime porro labore dolorum nostrum harum ipsam dolores autem nam, quos culpa iusto perferendis fugiat, laudantium eos eius molestias rerum ad fuga.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime porro labore dolorum nostrum harum ipsam dolores autem nam, quos culpa iusto perferendis fugiat, laudantium eos eius molestias rerum ad fuga... <br><a href="">Saiba mais</a></p>
                     </div>
                 </div>
                 

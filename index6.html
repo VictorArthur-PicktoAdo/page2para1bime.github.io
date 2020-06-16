@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/lightbox.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-3.5.0.min.js"></script>
+    <script src="js/lightbox.js"></script>
+    <script type="text/javascript" src="js/jquery.mask.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.13.0/js/all.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.13.0/js/v4-shims.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+    <script type="text/javascript"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat"> -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/v4-shims.css">
+    <title>product</title>
+</head>
+<body>
+    <!-- NAVEGATION BAR -->
+    <button type="button" id="adaw"  class="button" value="adwad" onclick="mostrar('open_div')"><i class="fas fa-angle-down fa-3x"></i></button>
+        <div id="open_div" class="hidden">
+            <div class="bottonav">
+                <div  class="centralizar">
+                    <div id="haper"><a href="index.html"><i  class="fas fa-tree fa-lg"></i></a><div id="hover"> Inicio</div></div>
+                    <div id="haper1"><a href="index1.html"><i class="fas fa-newspaper fa-lg"></i></a><div id="hover1"> Novidades</div></div>
+                    <div id="haper2"><a href="index2.html" ><i class="fas fa-phone fa-lg"></i></a><div id="hover2"> Contato</div></div>
+                    <div id="haper3"><a href="index3.html" ><i class="fas fa-id-card-alt fa-lg"></i></a><div id="hover3"> Sobre</div></div>
+                </div>    
+                <div class="search-container">
+                    <form>
+                        <input id="myInput" type="text" placeholder="Search.." name="search">
+                    </form>
+                </div>
+            </div>
+        </div>
+            
+    <!-- ROW -->
+    <div id="1" class="row">
+        <div id="2" class="centercolumn1">
+            <div class="card">
+                <div class="head-perfil">
+                    <img class="imgper" src="images/perfil1.jpg" alt="dsda">
+                    <span>Kelrem Soares</span>
+                </div>
+                <p class="space1 ; text"></p>
+                <div class="imagens1">
+                    <a class="adaw" href="images/foto3.jpg" data-lightbox="mygallery('1');"><img class="imgs1" src="images/foto3.jpg" alt="adwa"></a>
+                    <h3 style="margin-left: 670px">Saaara (Flor albina)</h3>
+                    
+                    <p align="justify" style="margin-left: 670px; margin-right: 15px;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos, quidem minus! Pariatur adipisci quas sed, facilis ducimus a odit, illum quidem itaque autem molestias. Tenetur, voluptatum vel. Vel, alias numquam.
+                    Ea, quo nemo quam doloremque ex id tempore alias itaque unde dolore enim, quidem nesciunt, quibusdam numquam fugit modi facilis iste libero dolor earum. Repellendus explicabo quam dignissimos corporis at?
+                    Illum dignissimos placeat reiciendis, accusamus eos sint id est veritatis natus, similique, reprehenderit adipisci cupiditate ut autem! At facere molestias suscipit, maiores cupiditate magni quos, dicta, repellendus eligendi earum similique!
+                    Distinctio inventore amet quam porro velit debitis nemo iste vel reiciendis perspiciatis, necessitatibus aut, quo officiis non dolores odit laborum? Consequatur magni itaque necessitatibus totam est quibusdam fugiat impedit reiciendis.
+                    Corrupti accusantium unde cumque debitis id cupiditate, inventore iusto asperiores esse porro hic ex libero impedit quae. Quo assumenda minus, maiores consequatur non doloribus, libero iusto tenetur, vel ratione pariatur?
+                    Iste, quos alias libero in distinctio sit at sapiente, quae accusamus aperiam, officiis molestiae maxime? Incidunt nisi molestias eos aperiam possimus vero fugiat voluptates amet. Aspernatur nobis libero aliquid ipsa!
+                    Corporis qui debitis ullam unde illum tenetur velit aliquid impedit veniam reiciendis quas esse ducimus in dolorem assumenda enim distinctio sit fugit recusandae voluptate, ipsam rem similique vero. Consequuntur.</p>
+                
+                </div>
+                <div class="btn" style="margin-left: 700px;">
+                    <a id="adwa" href="index2.html"><i class="fas fa-shopping-cart"></i>
+                    <span class="text1">Comprar R$1000,00</span></a>
+                </div>
+                
+                <div class="chat" style="margin-top: 290px;">
+                    Converse com outras pessoas por aqui:
+                    <div >
+                        <input class="nick" id="nick" type="text" /><br>
+                        <button class="btnConectar" id="btnConectar" onclick="conectar();">CONECTAR</button><br>
+                    </div>
+                    <div>
+                        <input class="msg" id="msg" type="text" /><br>
+                        <button class="btnEnviar" id="btnEnviar" onclick="enviar();" disabled>ENVIAR</button>
+                    </div>
+                </div>
+                <div class="space1" id="chat">
+                    <h3> CHAT </h3>
+                </div>
+            </div>
+</body>
+</html>
