@@ -22,20 +22,25 @@
 </head>
 <body>
     <!-- NAVEGATION BAR -->
+    <div class="btnVoltar">
+        <a id="adwa" href="index.html"><i class="fas fa-angle-left fa-2x"></i>
+        <span class="text1">Voltar pro feed</span></a>
+    </div>
+
     <button type="button" id="adaw"  class="button" value="adwad" onclick="mostrar('open_div')"><i class="fas fa-angle-down fa-3x"></i></button>
         <div id="open_div" class="hidden">
             <div class="bottonav">
-                <div  class="centralizar">
+                <div>
                     <div id="haper"><a href="index.html"><i  class="fas fa-tree fa-lg"></i></a><div id="hover"> Inicio</div></div>
                     <div id="haper1"><a href="index1.html"><i class="fas fa-newspaper fa-lg"></i></a><div id="hover1"> Novidades</div></div>
                     <div id="haper2"><a href="index2.html" ><i class="fas fa-phone fa-lg"></i></a><div id="hover2"> Contato</div></div>
                     <div id="haper3"><a href="index3.html" ><i class="fas fa-id-card-alt fa-lg"></i></a><div id="hover3"> Sobre</div></div>
+                    <div class="search-container">
+                        <form>
+                            <input id="myInput" type="text" placeholder="Search.." name="search">
+                        </form>
+                    </div>
                 </div>    
-                <div class="search-container">
-                    <form>
-                        <input id="myInput" type="text" placeholder="Search.." name="search">
-                    </form>
-                </div>
             </div>
         </div>
             
@@ -49,10 +54,10 @@
                 </div>
                 <p class="space1 ; text"></p>
                 <div class="imagens1">
-                    <a class="adaw" href="images/foto1.jpg" data-lightbox="mygallery('1');"><img class="imgs1" src="images/foto1.jpg" alt="adwa"></a>
-                    <h3 style="margin-left: 670px">Loto (Flor negra)</h3>
+                    <a class="adaw" href="images/foto1.jpg" data-lightbox="mygallery('1');"><img class="imgs1" style="padding: 10px;" src="images/foto1.jpg" alt="adwa"></a>
+                    <h3>Loto (Flor negra)</h3>
                     
-                    <p align="justify" style="margin-left: 670px; margin-right: 15px;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos, quidem minus! Pariatur adipisci quas sed, facilis ducimus a odit, illum quidem itaque autem molestias. Tenetur, voluptatum vel. Vel, alias numquam.
+                    <p align="justify" style="padding: 10px;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dignissimos, quidem minus! Pariatur adipisci quas sed, facilis ducimus a odit, illum quidem itaque autem molestias. Tenetur, voluptatum vel. Vel, alias numquam.
                     Ea, quo nemo quam doloremque ex id tempore alias itaque unde dolore enim, quidem nesciunt, quibusdam numquam fugit modi facilis iste libero dolor earum. Repellendus explicabo quam dignissimos corporis at?
                     Illum dignissimos placeat reiciendis, accusamus eos sint id est veritatis natus, similique, reprehenderit adipisci cupiditate ut autem! At facere molestias suscipit, maiores cupiditate magni quos, dicta, repellendus eligendi earum similique!
                     Distinctio inventore amet quam porro velit debitis nemo iste vel reiciendis perspiciatis, necessitatibus aut, quo officiis non dolores odit laborum? Consequatur magni itaque necessitatibus totam est quibusdam fugiat impedit reiciendis.
@@ -61,20 +66,21 @@
                     Corporis qui debitis ullam unde illum tenetur velit aliquid impedit veniam reiciendis quas esse ducimus in dolorem assumenda enim distinctio sit fugit recusandae voluptate, ipsam rem similique vero. Consequuntur.</p>
                 
                 </div>
-                <div class="btn" style="margin-left: 700px;">
+                <div class="btn">
                     <a id="adwa" href="index2.html"><i class="fas fa-shopping-cart"></i>
                     <span class="text1">Comprar R$100,00</span></a>
                 </div>
                 
-                <div class="chat" style="margin-top: 280px;">
-                    Converse com outras pessoas por aqui:
-                    <div >
-                        <input class="nick" id="nick" type="text" /><br>
-                        <button class="btnConectar" id="btnConectar" onclick="conectar();">CONECTAR</button><br>
+                <div class="chat">
+                    <div>
+                        <input style="background-color: #242526; border: thin solid #242526;" class="nick" id="nick" type="text" disabled />
+                        <p style="float: left; margin-bottom: 5px;">Converse com outras pessoas por aqui:</p>
+                        <input class="nick" id="nick" placeholder="Nick" type="text" /><br>
+                        <button class="btnConectar" id="btnConectar" onclick="conectar();">Conectar</button><br>
                     </div>
                     <div>
-                        <input class="msg" id="msg" type="text" /><br>
-                        <button class="btnEnviar" id="btnEnviar" onclick="enviar();" disabled>ENVIAR</button>
+                        <input class="msg" id="msg" placeholder="Envie uma mensagem" type="text" /><br>
+                        <button class="btnEnviar" id="btnEnviar" onclick="enviar();" disabled>Enviar</button>
                     </div>
                 </div>
                 <div class="space1" id="chat">

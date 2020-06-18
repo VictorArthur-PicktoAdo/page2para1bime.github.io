@@ -55,6 +55,17 @@ body {
     z-index: 100000;
 }
 
+#hover4{
+    border-radius: 3px;
+    color: black;
+    background-color: #c8c8c8;
+    padding: 4px;
+    visibility: hidden;
+    position: absolute;
+}
+
+
+
 #hover, #hover1, #hover2, #hover3{
     border-radius: 3px;
     color: black;
@@ -65,7 +76,7 @@ body {
     margin-left: 250px;
 }
 
-#haper:hover #hover, #haper1:hover #hover1, #haper2:hover #hover2, #haper3:hover #hover3{
+#haper:hover #hover, #haper1:hover #hover1, #haper2:hover #hover2, #haper3:hover #hover3, #haper4:hover{
     visibility: visible;
 }
 
@@ -174,6 +185,10 @@ div.container4 {
     user-select: none;
 }
 
+.imagens1, .imagens2, .imagens3{
+    height: 700px;
+}
+
 .row .centercolumn1 .card .imagens1 .adaw .imgs1{
     float: left;
 }
@@ -203,34 +218,106 @@ div.container4 {
     margin: 30px;
 }
 
+::-webkit-input-placeholder{
+    color: #707070;
+}
+
 .nick{
     width: 100%;
+    height: 40px;
+
+    background-color: #323233;
+    color: #c8c8c8;
+    
     border-radius: 5px;
     border: thin solid #393A3B;
 }
 
+.fa-angle-left{
+    padding-top: 10px;
+    color: black;
+}
+
+.btnVoltar a{
+    text-decoration: none;
+}
+
+.btnVoltar:hover{
+    background-color: rgb(117, 167, 120);
+}
+
+.btnVoltar{
+    position: fixed;
+
+    background-color: rgb(131, 204, 133);
+
+    border-radius: 5px;
+    border: thin solid #000000;
+
+    float: right;
+
+    margin-left: 15px;
+    padding-bottom: 8px;
+    padding-left: 8px;
+    padding-right: 8px;
+
+    z-index: 1000000;
+}
+
+.btnConectar:hover{
+    background-color: rgb(117, 167, 120);
+    cursor: pointer;
+}
+
 .btnConectar{
+
+    padding: 10px;
     margin-top: 10px;
     margin-bottom: 10px;
+
     left: 50%;
+
+    background-color: rgb(131, 204, 133);
+    color: black;
+
     border: thin solid #393A3B;
+    border-radius: 5px;
 }
 
 .msg{
     width: 100%;
+    height: 35px;
+
+    background-color: #323233;
+    color: #c8c8c8;
+
     border-radius: 5px;
     border: thin solid #393A3B;
 }
 
+.btnEnviar:hover{
+    cursor: pointer;
+}
+
 .btnEnviar{
-    margin-top: 10px;
+    width: 70px;
+    height: 40px;
+
+    background-color: rgb(80, 102, 81); 
+    color: black;
+
+    border-radius: 5px;
     border: thin solid #393A3B;
+    
+    margin-top: 10px;
 } 
 
 .imgs {
     width: 100%;
     height: 100%;
+
     object-fit: cover;
+
     user-select: none;
 }
 
@@ -488,6 +575,10 @@ textarea:focus, input:focus, select:focus {
 }
 
 @media screen and (max-width: 600px) {
+    .btnVoltar{
+        visibility: hidden;
+    }
+
 
     .bottonav input#myInput{
         width: 480px;

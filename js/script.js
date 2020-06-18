@@ -17,7 +17,14 @@ var socket;   //objeto que vai conter a minha conexão
 function conectar(){
 
   nickName = document.getElementById("nick").value;
-  document.getElementById("btnConectar").disabled = true;
+  // document.getElementById("btnConectar").disabled = true;
+  document.getElementById('btnConectar').onclick = function() {
+    var botao = document.getElementById('btnConectar');
+    var botao2 = document.getElementById('btnEnviar');
+    botao.disabled = true;
+    botao.style.backgroundColor = "rgb(80, 102, 81)";
+    botao2.style.backgroundColor = "rgb(131, 204, 133)";
+ }
   socket = new WebSocket(url);
   socket.onopen = conectou;
   socket.onmessage = recebeu;
@@ -36,6 +43,7 @@ function recebeu(msg){
   var obj = JSON.parse(msg.data);
   chat.innerHTML += "<br>" + obj.nick + " diz: " + obj.message;
 
+
 }
 
 function enviar(){
@@ -48,5 +56,5 @@ function enviar(){
   socket.onmessage = recebeu;
   socket.send(JSON.stringify(obj));
   inMsg.value = "";
-
+  
 }
