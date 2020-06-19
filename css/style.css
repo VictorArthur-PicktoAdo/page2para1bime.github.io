@@ -11,6 +11,130 @@ body {
 
 }
 
+.box-area div{
+    position: absolute;
+    list-style: none;
+    width: 25px;
+    height: 25px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 20s linear infinite;
+    bottom:  -20px;
+    z-index: 100;
+}
+
+.box-area div:nth-child(1){
+    left: 86%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+.box-area div:nth-child(2){
+    left: 12%;
+    width: 30px;
+    height: 30px;
+    animation-delay: 1.5s;
+    animation-duration: 10s;
+}
+
+.box-area div:nth-child(3){
+    left: 70%;
+    width: 100px;
+    height: 100px;
+    animation-delay: 5.5s;
+}
+
+.box-area div:nth-child(4){
+    left: 42%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 15s;
+}
+
+.box-area div:nth-child(5){
+    left: 65%;
+    width: 40px;
+    height: 40px;
+    animation-delay: 0s;
+}
+
+.box-area div:nth-child(6){
+    left: 15%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 3.5s;
+    animation-duration: 10s;
+}
+
+/* aaaaaaaaaaaaaaaaaaaaaa */
+
+.box-area2 div{
+    position: absolute;
+    list-style: none;
+    width: 25px;
+    height: 25px;
+    background: rgba(255, 255, 255, 0.2);
+    animation: animate 20s linear infinite;
+    bottom:  -400px;
+    z-index: 100;
+}
+
+.box-area2 div:nth-child(1){
+    left: 86%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+}
+
+.box-area2 div:nth-child(2){
+    left: 12%;
+    width: 30px;
+    height: 30px;
+    animation-delay: 0s;
+    animation-duration: 10s;
+}
+
+.box-area2 div:nth-child(3){
+    left: 70%;
+    width: 100px;
+    height: 100px;
+    animation-delay: 0s;
+}
+
+.box-area2 div:nth-child(4){
+    left: 42%;
+    width: 150px;
+    height: 150px;
+    animation-delay: 0s;
+    animation-duration: 15s;
+}
+
+.box-area2 div:nth-child(5){
+    left: 65%;
+    width: 40px;
+    height: 40px;
+    animation-delay: 0s;
+}
+
+.box-area2 div:nth-child(6){
+    left: 15%;
+    width: 110px;
+    height: 110px;
+    animation-delay: 0s;
+    animation-duration: 10s;
+}
+
+ @keyframes animate{
+    0%{
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+    100%{
+        transform: translateY(-800px) rotate(360deg);
+        opacity: 0;
+    }
+}
 
 .row .centercolumn .card hr{
     border-color: #18191A;
@@ -21,6 +145,7 @@ body {
     width: 160px;
     border-color: rgb(255, 255, 255); 
     float: left;
+    z-index: 9;
 }
 
 .text{
@@ -139,6 +264,13 @@ body {
     user-select: none;
 }
 
+.centercolumn1{
+    width: 50%;
+    margin: auto;
+    margin-bottom: 100px;
+    
+}
+
 .row:after {
     content: "";
     display: table;
@@ -189,7 +321,7 @@ div.container4 {
     height: 700px;
 }
 
-.row .centercolumn1 .card .imagens1 .adaw .imgs1{
+.row .centercolumn1 .card .imagens1 .adaw .imgs1, .imgs2{
     float: left;
 }
 
@@ -328,6 +460,14 @@ div.container4 {
     user-select: none;
 }
 
+.imgs2 {
+    border-radius: 10px;
+    width: 50%;
+    height: 100%;
+    object-fit: cover;
+    user-select: none;
+}
+
 .head-perfil{
     display: flex;
     justify-content: left;
@@ -384,6 +524,20 @@ span{
     margin-bottom: 115px;
     background-color: #242526;
     border-radius: 10px;
+    z-index: 11;
+}
+
+.input:hover, .input.la:hover, .nick:hover, .btnConectar:hover, .msg:hover, .btnEnviar:hover{
+    animation: bounce .4s;
+}
+
+@keyframes bounce{
+    10%, 40%, 70%{
+        transform: translateX(-10px);
+    }
+    25%, 55%, 85%{
+        transform: translateX(10px);
+    }
 }
 
 .input{
@@ -407,14 +561,16 @@ span{
 }
 
 .input.le{
+    border-radius: 5px;
     width: 70px;
-    background-color: #18191A;
-    color: rgb(255, 255, 255);
+    background-color: rgb(131, 204, 133);
+    color: rgb(0, 0, 0);
 }
 
 .input.le:hover{
-    background: #323233;
-    color: rgb(131, 204, 133);
+    cursor: pointer;
+    background: rgb(80, 102, 81);
+    color: rgb(0, 0, 0);
 }
 
 input[type=number]::-webkit-inner-spin-button,
@@ -500,6 +656,7 @@ input[type=number]::-webkit-outer-spin-button {
     padding-left: 25px;
     padding-right: 20px;
     user-select: none;
+    z-index: 9;
 }
 
 textarea:focus, input:focus, select:focus {

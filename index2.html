@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/lightbox.min.css">
     <script type="text/javascript" src="js/jquery-3.5.0.min.js"></script>
     <script type="text/javascript" src="js/jquery.mask.min.js"></script>
-    <script src="js/lightbox-plus-jquery.min.js"></script>
+    <script src="js/lightbox.js"></script>
     <script type="text/javascript" src="js/script.js"></script>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat"> -->
@@ -21,6 +21,17 @@
     </script>
 </head>
 <body>
+    <div class="animation-area">
+        <div class="box-area">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </ul>
+    </div>
+
     <!-- NAVEGATION BAR -->
     <button type="button" id="adaw"  class="button" value="adwad" onclick="mostrar('open_div')"><i class="fas fa-angle-down fa-3x"></i></button>
         <div id="open_div" class="hidden">
@@ -56,7 +67,7 @@
                 <input required class="input" type="text" placeholder="Nome Completo" name="name">
                 <input required class="input" type="email" placeholder="Email" name="email">
                 <input required class="input" type="tel" placeholder="Telefone" name="tel">
-                <input required class="input" type="text" placeholder="Título da mensagem" name="timsg">
+                <input id="btnumd" value="" required class="input" type="text" placeholder="Título da mensagem" name="timsg">
                 <textarea required class="input la" style="resize: none" maxlength="500" placeholder="Razão do contato" name="msg"></textarea>
                 <button class="input le" type="submit">Enviar</button>
             </form>
